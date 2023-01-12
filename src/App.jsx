@@ -62,6 +62,54 @@ function App() {
     setDElement(sound);
   };
 
+  const handleKeyDown = (e) => {
+    console.log(e.key);
+    var letter = e.key.toUpperCase();
+    switch (letter) {
+      case "Q":
+        document.getElementById(letter).play();
+        setDElement("Heater-1");
+        break;
+      case "W":
+        document.getElementById(letter).play();
+        setDElement("Heater-2");
+        break;
+      case "E":
+        document.getElementById(letter).play();
+        setDElement("Heater-3");
+        break;
+      case "A":
+        document.getElementById(letter).play();
+        setDElement("Heater-4");
+        break;
+      case "S":
+        document.getElementById(letter).play();
+        setDElement("Clap");
+        break;
+      case "D":
+        document.getElementById(letter).play();
+        setDElement("Open-HH");
+        break;
+      case "Z":
+        document.getElementById(letter).play();
+        setDElement("Kick_n_Hat");
+        break;
+      case "X":
+        document.getElementById(letter).play();
+        setDElement("Kick");
+        break;
+      case "C":
+        document.getElementById(letter).play();
+        setDElement("Closed-HH");
+        break;
+
+      default:
+        break;
+    }
+  };
+
+  document.addEventListener("keydown", handleKeyDown);
+
   return (
     <div id="drum-machine">
       <div id="display">{delement}</div>
