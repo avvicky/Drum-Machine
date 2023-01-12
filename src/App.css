@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: white;
+  background-color: #ffffff;
+  background-image: url("https://www.transparenttextures.com/patterns/60-lines.png");
+}
+
+#drum-machine {
+  background-color: rgba(100, 100, 100, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+#drum-pad-wrap {
+  display: grid;
+  grid-template-columns: repeat(3, 80px);
+  grid-template-rows: repeat(3, 80px);
+  grid-gap: 6px 6px;
+}
+
+.drum-pad {
+  color: white;
+  font-family: arial;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+  margin: 3px;
+  width: 80px;
+  height: 80px;
+  background-color: #314657;
+  border: 2px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.playing {
+  color: #466a7d;
+  transform: scale(1.08);
+  box-shadow: 0 0 2px 2px #466a7d;
+}
+
+#display {
+  position: relative;
+  top: -50px;
+  left: -20px;
+  color: #466a7d;
+  font-weight: bold;
+  font-size: 20px;
+  transition: transform 100ms linear;
+}
+
+.playing2 {
+  transform: scale(1.2);
+}
